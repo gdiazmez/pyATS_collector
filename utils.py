@@ -4,7 +4,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 import datetime
 from datetime import datetime
 
-logging.basicConfig(filename='log_ccollect.log', level=logging.DEBUG,
+logging.basicConfig(filename='log_collect.log', level=logging.DEBUG,
                     format='%(asctime)s %(levelname)s : %(message)s')
 
 def Create_Testbed(user,pswd,hostnames,device_ips,jump_bool,

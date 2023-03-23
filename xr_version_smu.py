@@ -7,7 +7,7 @@ import os
 import getpass
 from utils import Create_Testbed,pool_connection
 
-logging.basicConfig(filename='log_ccollect.log', level=logging.DEBUG,
+logging.basicConfig(filename='log_collect.log', level=logging.DEBUG,
                     format='%(asctime)s %(levelname)s : %(message)s')
 
 

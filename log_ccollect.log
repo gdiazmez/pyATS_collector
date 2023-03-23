@@ -71518,3 +71518,327 @@ Label : 7.3.26-0
         xrv9k-k9sec-3.2.0.0-r7326
         xrv9k-m2m-2.0.0.0-r7326
         xrv9k-mpls-2.1.0.0-r7326
+2023-03-23 14:20:05,000 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,000 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,001 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,001 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,001 DEBUG : Device CS-PE006V-USE1AZ4N003P added to testbed
+2023-03-23 14:20:05,002 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,002 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,002 DEBUG : Device CS-PE010V-USE1AZ4N003P added to testbed
+2023-03-23 14:20:05,002 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,002 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,002 DEBUG : Device CS-PE101V-USE1AZ4N003P added to testbed
+2023-03-23 14:20:05,002 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,003 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,003 DEBUG : Device CS-PE102V-USE1AZ4N003P added to testbed
+2023-03-23 14:20:05,003 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,003 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,003 DEBUG : Device CS-PE001V-USE1AZ1VNFCVPCP added to testbed
+2023-03-23 14:20:05,003 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,003 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,003 DEBUG : Device CS-PE002V-USE1AZ1VNFCVPCP added to testbed
+2023-03-23 14:20:05,004 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,004 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,004 DEBUG : Device CS-PE002V-USE1AZ1B315P added to testbed
+2023-03-23 14:20:05,004 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,004 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,004 DEBUG : Device CS-PE004V-USE1AZ1B315P added to testbed
+2023-03-23 14:20:05,005 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,005 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:05,005 DEBUG : Device CS-PE105V-USE1AZ1B320P added to testbed
+2023-03-23 14:20:05,042 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,042 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,087 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,087 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,087 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,087 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,088 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,088 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,088 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,088 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,089 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,089 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,089 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,089 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,090 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,090 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,090 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,090 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,090 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,091 DEBUG : Credential credentials not found, trying default ...
+2023-03-23 14:20:05,135 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:05,151 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:05,154 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:05,164 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:05,185 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:05,188 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:05,191 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:05,206 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:05,227 DEBUG : Connection manager added new connection via mgmt with alias cli
+2023-03-23 14:20:06,278 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:06,283 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:06,527 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:06,528 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:06,528 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:06,530 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:06,531 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:06,532 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:06,532 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:08,303 DEBUG : IP 10.228.7.158 SSH keys cleared, continue with connection
+2023-03-23 14:20:08,311 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:08,926 DEBUG : IP 10.236.62.126 SSH keys cleared, continue with connection
+2023-03-23 14:20:08,938 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:09,524 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:09,618 DEBUG : IP 10.228.87.222 SSH keys cleared, continue with connection
+2023-03-23 14:20:09,625 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:10,291 DEBUG : IP 10.231.81.78 SSH keys cleared, continue with connection
+2023-03-23 14:20:10,299 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:10,398 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:11,001 DEBUG : IP 10.231.145.110 SSH keys cleared, continue with connection
+2023-03-23 14:20:11,008 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:11,115 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:11,689 DEBUG : IP 10.228.87.206 SSH keys cleared, continue with connection
+2023-03-23 14:20:11,700 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:11,770 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:12,149 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:12,206 DEBUG : IP 10.228.113.94 SSH keys cleared, continue with connection
+2023-03-23 14:20:12,215 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:12,256 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:12,767 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:12,825 DEBUG : IP 10.236.62.110 SSH keys cleared, continue with connection
+2023-03-23 14:20:12,832 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:12,962 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:13,237 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:13,335 DEBUG : IP 10.231.80.254 SSH keys cleared, continue with connection
+2023-03-23 14:20:13,347 DEBUG : Connection manager added new connection via cli with alias cli
+2023-03-23 14:20:13,349 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:13,965 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:14,174 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:14,376 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:14,764 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:14,812 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:15,607 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:16,297 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:17,059 DEBUG : Using a default key as pyATS configuration under [secrets] string.key was not specified.
+2023-03-23 14:20:18,070 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.3",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "1 week 6 hours"
+}
+2023-03-23 14:20:18,071 INFO : Version on vRouter: CS-PE006V-USE1AZ4N003P is: 7.3.3
+2023-03-23 14:20:18,378 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.26",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "15 weeks 3 days 8 hours 22 minutes"
+}
+2023-03-23 14:20:18,378 INFO : Version on vRouter: CS-PE001V-USE1AZ1VNFCVPCP is: 7.3.26
+2023-03-23 14:20:19,288 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.3",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "8 weeks 1 day 6 hours 2 minutes"
+}
+2023-03-23 14:20:19,288 INFO : Version on vRouter: CS-PE004V-USE1AZ1B315P is: 7.3.3
+2023-03-23 14:20:19,974 INFO : Full packages on hostname: CS-PE006V-USE1AZ4N003P is:
+Thu Mar 23 17:20:19.511 UTC
+Label : 7.3.3-BUGFIX_2022_11_01
+
+    Committed Packages: 13
+        xrv9k-xr-7.3.3 version=7.3.3 [Boot image]
+        xrv9k-mpls-te-rsvp-3.1.0.0-r733
+        xrv9k-base-2.0.0.1-r733.CSCwa80752
+        xrv9k-k9sec-3.2.0.0-r733
+        xrv9k-mpls-2.1.0.0-r733
+        xrv9k-mgbl-3.0.0.0-r733
+        xrv9k-ospf-3.0.0.0-r733
+        xrv9k-mcast-3.0.0.0-r733
+        xrv9k-m2m-2.0.0.0-r733
+        xrv9k-li-x-1.1.0.0-r733
+        xrv9k-iosxr-infra-6.0.0.1-r733.CSCwb74098
+        xrv9k-isis-2.1.0.0-r733
+        xrv9k-eigrp-1.0.0.0-r733
+2023-03-23 14:20:20,150 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.3",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "9 weeks 1 day 6 hours 58 minutes"
+}
+2023-03-23 14:20:20,150 INFO : Version on vRouter: CS-PE105V-USE1AZ1B320P is: 7.3.3
+2023-03-23 14:20:20,361 INFO : Full packages on hostname: CS-PE001V-USE1AZ1VNFCVPCP is:
+Thu Mar 23 17:20:19.902 UTC
+Label : 7.3.26-0
+
+    Committed Packages: 11
+        xrv9k-xr-7.3.26 version=7.3.26 [Boot image]
+        xrv9k-mgbl-3.0.0.0-r7326
+        xrv9k-eigrp-1.0.0.0-r7326
+        xrv9k-mpls-te-rsvp-3.1.0.0-r7326
+        xrv9k-mcast-3.0.0.0-r7326
+        xrv9k-ospf-3.0.0.0-r7326
+        xrv9k-bng-1.0.0.0-r7326
+        xrv9k-isis-2.1.0.0-r7326
+        xrv9k-k9sec-3.2.0.0-r7326
+        xrv9k-m2m-2.0.0.0-r7326
+        xrv9k-mpls-2.1.0.0-r7326
+2023-03-23 14:20:20,433 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.3",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "4 weeks 3 days 7 hours 34 minutes"
+}
+2023-03-23 14:20:20,433 INFO : Version on vRouter: CS-PE101V-USE1AZ4N003P is: 7.3.3
+2023-03-23 14:20:20,888 INFO : Full packages on hostname: CS-PE004V-USE1AZ1B315P is:
+Thu Mar 23 17:20:20.405 UTC
+Label : 7.3.3-BUGFIX_2022_11_01
+
+    Committed Packages: 13
+        xrv9k-xr-7.3.3 version=7.3.3 [Boot image]
+        xrv9k-mpls-te-rsvp-3.1.0.0-r733
+        xrv9k-base-2.0.0.1-r733.CSCwa80752
+        xrv9k-k9sec-3.2.0.0-r733
+        xrv9k-mpls-2.1.0.0-r733
+        xrv9k-mgbl-3.0.0.0-r733
+        xrv9k-ospf-3.0.0.0-r733
+        xrv9k-mcast-3.0.0.0-r733
+        xrv9k-m2m-2.0.0.0-r733
+        xrv9k-li-x-1.1.0.0-r733
+        xrv9k-iosxr-infra-6.0.0.1-r733.CSCwb74098
+        xrv9k-isis-2.1.0.0-r733
+        xrv9k-eigrp-1.0.0.0-r733
+2023-03-23 14:20:21,449 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.3",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "1 day 5 hours 36 minutes"
+}
+2023-03-23 14:20:21,449 INFO : Version on vRouter: CS-PE010V-USE1AZ4N003P is: 7.3.3
+2023-03-23 14:20:21,928 INFO : Full packages on hostname: CS-PE105V-USE1AZ1B320P is:
+Thu Mar 23 17:20:21.438 UTC
+Label : 7.3.3-BUGFIX_2022_11_01
+
+    Committed Packages: 13
+        xrv9k-xr-7.3.3 version=7.3.3 [Boot image]
+        xrv9k-mpls-te-rsvp-3.1.0.0-r733
+        xrv9k-base-2.0.0.1-r733.CSCwa80752
+        xrv9k-k9sec-3.2.0.0-r733
+        xrv9k-mpls-2.1.0.0-r733
+        xrv9k-mgbl-3.0.0.0-r733
+        xrv9k-ospf-3.0.0.0-r733
+        xrv9k-mcast-3.0.0.0-r733
+        xrv9k-m2m-2.0.0.0-r733
+        xrv9k-li-x-1.1.0.0-r733
+        xrv9k-iosxr-infra-6.0.0.1-r733.CSCwb74098
+        xrv9k-isis-2.1.0.0-r733
+        xrv9k-eigrp-1.0.0.0-r733
+2023-03-23 14:20:22,013 INFO : Full packages on hostname: CS-PE101V-USE1AZ4N003P is:
+Thu Mar 23 17:20:21.540 UTC
+Label : 7.3.3-BUGFIX_2022_11_01
+
+    Committed Packages: 13
+        xrv9k-xr-7.3.3 version=7.3.3 [Boot image]
+        xrv9k-mpls-te-rsvp-3.1.0.0-r733
+        xrv9k-base-2.0.0.1-r733.CSCwa80752
+        xrv9k-k9sec-3.2.0.0-r733
+        xrv9k-mpls-2.1.0.0-r733
+        xrv9k-mgbl-3.0.0.0-r733
+        xrv9k-ospf-3.0.0.0-r733
+        xrv9k-mcast-3.0.0.0-r733
+        xrv9k-m2m-2.0.0.0-r733
+        xrv9k-li-x-1.1.0.0-r733
+        xrv9k-iosxr-infra-6.0.0.1-r733.CSCwb74098
+        xrv9k-isis-2.1.0.0-r733
+        xrv9k-eigrp-1.0.0.0-r733
+2023-03-23 14:20:22,054 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.26",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "1 week 1 day 5 hours 40 minutes"
+}
+2023-03-23 14:20:22,054 INFO : Version on vRouter: CS-PE002V-USE1AZ1VNFCVPCP is: 7.3.26
+2023-03-23 14:20:22,518 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.3",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "8 weeks 1 day 6 hours 3 minutes"
+}
+2023-03-23 14:20:22,518 INFO : Version on vRouter: CS-PE002V-USE1AZ1B315P is: 7.3.3
+2023-03-23 14:20:22,930 INFO : Full packages on hostname: CS-PE010V-USE1AZ4N003P is:
+Thu Mar 23 17:20:22.476 UTC
+Label : 7.3.3-BUGFIX_2022_11_01
+
+    Committed Packages: 13
+        xrv9k-xr-7.3.3 version=7.3.3 [Boot image]
+        xrv9k-mpls-te-rsvp-3.1.0.0-r733
+        xrv9k-base-2.0.0.1-r733.CSCwa80752
+        xrv9k-k9sec-3.2.0.0-r733
+        xrv9k-mpls-2.1.0.0-r733
+        xrv9k-mgbl-3.0.0.0-r733
+        xrv9k-ospf-3.0.0.0-r733
+        xrv9k-mcast-3.0.0.0-r733
+        xrv9k-m2m-2.0.0.0-r733
+        xrv9k-li-x-1.1.0.0-r733
+        xrv9k-iosxr-infra-6.0.0.1-r733.CSCwb74098
+        xrv9k-isis-2.1.0.0-r733
+        xrv9k-eigrp-1.0.0.0-r733
+2023-03-23 14:20:23,512 DEBUG : {
+  "operating_system": "IOSXR",
+  "software_version": "7.3.3",
+  "device_family": "IOS-XRv 9000",
+  "uptime": "8 weeks 3 days 7 hours 42 minutes"
+}
+2023-03-23 14:20:23,512 INFO : Version on vRouter: CS-PE102V-USE1AZ4N003P is: 7.3.3
+2023-03-23 14:20:23,572 INFO : Full packages on hostname: CS-PE002V-USE1AZ1VNFCVPCP is:
+Thu Mar 23 17:20:23.107 UTC
+Label : 7.3.26-0
+
+    Committed Packages: 11
+        xrv9k-xr-7.3.26 version=7.3.26 [Boot image]
+        xrv9k-mgbl-3.0.0.0-r7326
+        xrv9k-eigrp-1.0.0.0-r7326
+        xrv9k-mpls-te-rsvp-3.1.0.0-r7326
+        xrv9k-mcast-3.0.0.0-r7326
+        xrv9k-ospf-3.0.0.0-r7326
+        xrv9k-bng-1.0.0.0-r7326
+        xrv9k-isis-2.1.0.0-r7326
+        xrv9k-k9sec-3.2.0.0-r7326
+        xrv9k-m2m-2.0.0.0-r7326
+        xrv9k-mpls-2.1.0.0-r7326
+2023-03-23 14:20:24,023 INFO : Full packages on hostname: CS-PE002V-USE1AZ1B315P is:
+Thu Mar 23 17:20:23.536 UTC
+Label : 7.3.3-BUGFIX_2022_11_01
+
+    Committed Packages: 13
+        xrv9k-xr-7.3.3 version=7.3.3 [Boot image]
+        xrv9k-mpls-te-rsvp-3.1.0.0-r733
+        xrv9k-base-2.0.0.1-r733.CSCwa80752
+        xrv9k-k9sec-3.2.0.0-r733
+        xrv9k-mpls-2.1.0.0-r733
+        xrv9k-mgbl-3.0.0.0-r733
+        xrv9k-ospf-3.0.0.0-r733
+        xrv9k-mcast-3.0.0.0-r733
+        xrv9k-m2m-2.0.0.0-r733
+        xrv9k-li-x-1.1.0.0-r733
+        xrv9k-iosxr-infra-6.0.0.1-r733.CSCwb74098
+        xrv9k-isis-2.1.0.0-r733
+        xrv9k-eigrp-1.0.0.0-r733
+2023-03-23 14:20:24,899 INFO : Full packages on hostname: CS-PE102V-USE1AZ4N003P is:
+Thu Mar 23 17:20:24.437 UTC
+Label : 7.3.3-BUGFIX_2022_11_01
+
+    Committed Packages: 13
+        xrv9k-xr-7.3.3 version=7.3.3 [Boot image]
+        xrv9k-mpls-te-rsvp-3.1.0.0-r733
+        xrv9k-base-2.0.0.1-r733.CSCwa80752
+        xrv9k-k9sec-3.2.0.0-r733
+        xrv9k-mpls-2.1.0.0-r733
+        xrv9k-mgbl-3.0.0.0-r733
+        xrv9k-ospf-3.0.0.0-r733
+        xrv9k-mcast-3.0.0.0-r733
+        xrv9k-m2m-2.0.0.0-r733
+        xrv9k-li-x-1.1.0.0-r733
+        xrv9k-iosxr-infra-6.0.0.1-r733.CSCwb74098
+        xrv9k-isis-2.1.0.0-r733
+        xrv9k-eigrp-1.0.0.0-r733
