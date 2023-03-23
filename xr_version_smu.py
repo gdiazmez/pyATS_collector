@@ -18,7 +18,7 @@ def Testbed_routine(hostname):
     if jump_replace:
         try:
             jump = tb.devices['jump_host']
-            jump.connect()
+            jump.connect(log_stdout=verbose_flag)
             uut_ip = str(uut.connections['cli']['ip'])
             command = 'ssh-keygen -R {}'.format(uut_ip)
             jump.execute(command)
