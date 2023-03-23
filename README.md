@@ -11,8 +11,8 @@ usage: xr_version_smu.py [-h] -f FILE [-c CREDENTIALS] [-j] [-v] [-d] [-e] [-r]
 
 [-c CREDENTIALS, --credentials] Optional argument for vRouter creds in format user:pass
 
-[-j, --jump]                    Optional Flag to ask for SSH Jumphost detail
- -v, --vmc             Flag to ommit check CSCwa80752 on VMC vRouters
- -d, --detail          Flag to print verbose output from pyATS
- -e, --environment     Flag to use env_variables
- -r, --replace         Flag to use ssh-keygen -R to update ssh keys if jumphost is used
+[-j, --jump] Optional Flag to ask for SSH Jumphost detail
+[-v, --vmc] Optional Flag to ommit check CSCwa80752 on VMC vRouters
+[-d, --detail] Optional Flag to print verbose output from pyATS
+[-e, --environment] Flag to use enviornment variables
+[-r, --replace] Optional Flag to use ssh-keygen -R to update ssh keys if jumphost is used
