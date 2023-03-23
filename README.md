@@ -4,8 +4,8 @@ python script to run a routine using a manual testbed created on the fly from an
 
 usage: xr_version_smu.py [-h] -f FILE [-c CREDENTIALS] [-j] [-v] [-d] [-e] [-r]
 
-arguments:
- -h, --help show this help message and exit
+##arguments
+-h, --help show this help message and exit
  -f FILE, --file FILE  Input File
  -c CREDENTIALS, --credentials CREDENTIALS Send vRouter creds in format user:pass
  -j, --jump            Flag to ask for SSH Jumphost detail
