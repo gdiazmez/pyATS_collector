@@ -4,7 +4,7 @@ python script to run a routine using a manual testbed created on the fly from an
 
 usage: xr_version_smu.py [-h] -f FILE [-c CREDENTIALS] [-j] [-v] [-d] [-e] [-r]
 
-## arguments
+## Arguments
 [-h, --help] show this help message and exit
 
 -f FILE, --file FILE  Input File (Mandatory)
