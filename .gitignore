@@ -3,5 +3,5 @@ aws_environment
 __pycache__/utils.cpython-39.pyc
 log_collect.log
 Output.xlsx
-
-Output.xlsx
+.DS_Store
+device_info.xlsx
