@@ -3,7 +3,7 @@
 python scripts to run a routine using a manual testbed created on the fly from an excel sheet with hostname/IP tuple
 
 ## XR version and SMU check
-Check Version SMU and license from file with tuples
+Check Version, SMU and license from file with tuples
 
 usage: xr_version_smu.py [-h] -f FILE [-c CREDENTIALS] [-j] [-v] [-d] [-e] [-r]
 
@@ -33,6 +33,7 @@ usage: checks.py [-h] -f FILE [-c CREDENTIALS] [-j] [-d] [-e] [-r] -t {pre,post}
   [-h, --help]           show this help message and exit
   
   -f FILE, --file FILE  Input File
+  
   [-c CREDENTIALS, --credentials] CREDENTIALS
                         Send vRouter creds in format user:pass
                         
