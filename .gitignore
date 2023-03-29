@@ -1,7 +1,9 @@
 ~$device_info.xlsx
 aws_environment
 __pycache__/utils.cpython-39.pyc
-log_collect.log
+*.log
 Output.xlsx
 .DS_Store
 device_info.xlsx
+Precheck/
+Postcheck/
