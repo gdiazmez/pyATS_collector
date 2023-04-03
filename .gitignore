@@ -4,6 +4,6 @@ __pycache__/utils.cpython-39.pyc
 *.log
 Output.xlsx
 .DS_Store
-device_info.xlsx
 Precheck/
 Postcheck/
+device_info.xlsx
