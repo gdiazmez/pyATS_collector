@@ -1,4 +1,3 @@
-~$device_info.xlsx
 aws_environment
 __pycache__/utils.cpython-39.pyc
 *.log
@@ -6,5 +5,5 @@ Output.xlsx
 .DS_Store
 Precheck/
 Postcheck/
-device_info.xlsx
-device_info.xlsx
+~$device_info.xlsx
+example_device_info.xlsx

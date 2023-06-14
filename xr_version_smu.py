@@ -42,7 +42,10 @@ def Testbed_routine(hostname):
 
     if not connected:
         try:
-            uut.credentials['default'] = dict(username='sdnc.aws', password='D1$HmgmtAW$')
+            if vmc_flag:
+                uut.credentials['default'] = dict(username='root', password='dishcisco')
+            else:
+                uut.credentials['default'] = dict(username='sdnc.aws', password='D1$HmgmtAW$')
             uut.connect(init_config_commands=[],connection_timeout=5,log_stdout=verbose_flag)
             connected=True
         except:
@@ -160,7 +163,10 @@ Using environment variables for device credentials. Check these if connection fa
         # Throttling SMU
         'CSCwf27917'
     ]
+    global vmc_flag
+    vmc_flag = False
     if args.vmc:
+        vmc_flag = True
         print("VMC Flag used, Skip check on AWS license SMU\n")
         smu_list=[
             # Memory Leak SMU
