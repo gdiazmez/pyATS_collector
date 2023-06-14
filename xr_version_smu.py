@@ -151,15 +151,24 @@ Using environment variables for device credentials. Check these if connection fa
     global full_table
     global smu_list
     smu_list=[
+        # Smart License SMU
         'CSCwa80752',
+        # ISIS SMU
         'CSCwd63200',
-        'CSCwb74098'
+        # Memory Leak SMU
+        'CSCwb74098',
+        # Throttling SMU
+        'CSCwf27917'
     ]
     if args.vmc:
         print("VMC Flag used, Skip check on AWS license SMU\n")
         smu_list=[
+            # Memory Leak SMU
             'CSCwb74098',
-            'CSCwd63200'
+            # ISIS SMU
+            'CSCwd63200',
+            # Throttling SMU
+            'CSCwf27917'
         ]
     global verbose_flag
     if args.detail:
