@@ -7,7 +7,7 @@ import os
 import getpass
 from utils import Create_Testbed,pool_connection
 
-logging.basicConfig(filename='log_collect.log', level=logging.DEBUG,
+logging.basicConfig(filename='log_full_info.log', level=logging.DEBUG,
                     format='%(asctime)s %(levelname)s : %(message)s')
 
 
@@ -42,8 +42,9 @@ def Testbed_routine(hostname):
 
     if not connected:
         try:
-            if vmc_flag:
-                uut.credentials['default'] = dict(username='root', password='dishcisco')
+            for pattern in vmc_patterns:
+                if pattern in hostname:
+                    uut.credentials['default'] = dict(username='root', password='dishcisco')
             else:
                 uut.credentials['default'] = dict(username='sdnc.aws', password='D1$HmgmtAW$')
             uut.connect(init_config_commands=[],connection_timeout=5,log_stdout=verbose_flag)
@@ -55,6 +56,9 @@ def Testbed_routine(hostname):
     if connected:
         print('Device: "{}" connected, collecting'.format(hostname))
         try:
+            ### Get IPv4 from Lo0
+            output = uut.parse('show ipv4 interface brief | i Loopback0')
+            lo0_ipv4 = output['interface']['Loopback0']['ip_address']
             ### Get XR release
             output = uut.parse('show version')
             version = output['software_version']
@@ -66,7 +70,7 @@ def Testbed_routine(hostname):
             smu_state = True
             pending = 'SMU pending: \r'
 
-            vmc_patterns = ['VMC0','VNF0','RANMK', 'RANMN']
+
             for pattern in vmc_patterns:
                 if pattern in hostname:
                     smu_list = smu_list_vmc
@@ -95,7 +99,8 @@ def Testbed_routine(hostname):
                     lic_status="Registered"
             else:
                 lic_status="No Status Info. Check vRouter"
-            sheet.append([hostname,version,smu_state,lic_status])
+            # Sheet Format: "Hostname","Lo0 - IPv4","Lo0 - IPv6","Lo0 - Prefix SID","Lo10 - IPv4","Lo10 - IPv4","XR Version","SMU State","License Status"
+            sheet.append([hostname,lo0_ipv4,version,smu_state,lic_status])
         except Exception as e:
             logging.debug('Exception catched on Hostname: "{}"\n{}'.format(hostname,e))
         uut.destroy()
@@ -106,7 +111,6 @@ def main():
     parser.add_argument('-f','--file', help='Input File', required=True)
     parser.add_argument('-c','--credentials', help='Send vRouter creds in format user:pass', required=False)
     parser.add_argument('-j','--jump', action='store_true', help='Flag to ask for SSH Jumphost detail', required=False)
-    parser.add_argument('-v','--vmc', action='store_true', help='Flag to ommit check CSCwa80752 on VMC vRouters', required=False)
     parser.add_argument('-d','--detail', action='store_true', help='Flag to print verbose output from pyATS', required=False)
     parser.add_argument('-e','--environment', action='store_true', help='Flag to use env_variables', required=False)
     parser.add_argument('-r','--replace', action='store_true', help='Flag to use ssh-keygen -R to update ssh keys if jumphost is used', required=False)
@@ -183,12 +187,8 @@ Using environment variables for device credentials. Check these if connection fa
             'CSCwf27917'
         ]
     smu_list = smu_list_aws
-    global vmc_flag
-    vmc_flag = False
-    if args.vmc:
-        vmc_flag = True
-        print("VMC Flag used, Skip check on AWS license SMU\n")
-        smu_list= smu_list_vmc
+    global vmc_patterns
+    vmc_patterns = ['VMC0','VNF0','RANMK', 'RANMN']
     global verbose_flag
     if args.detail:
         verbose_flag=True
@@ -220,7 +220,7 @@ Using environment variables for device credentials. Check these if connection fa
     sheet = out_wb.active
     sheet.title = "Parsed"
     ### 1st row
-    sheet.append(["Hostname","XR Version","SMU State","License Status"])
+    sheet.append(["Hostname","Lo0 - IPv4","Lo0 - IPv6","Lo0 - Prefix SID","Lo10 - IPv4","Lo10 - IPv4","XR Version","SMU State","License Status"])
 
     result = pool_connection(12,hostnames,Testbed_routine)
     if result:
