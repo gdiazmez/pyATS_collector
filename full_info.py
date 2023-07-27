@@ -59,6 +59,13 @@ def Testbed_routine(hostname):
             ### Get IPv4 from Lo0
             output = uut.parse('show ipv4 interface brief | i Loopback0')
             lo0_ipv4 = output['interface']['Loopback0']['ip_address']
+            ### Get IPv6 from Lo0
+            output = uut.parse('show ipv6 interface Loopback0')
+            lo0_ipv6 = ''
+            for key in output['Loopback0']['ipv6'].keys():
+                if '/128' in key:
+                    lo0_ipv6 = output['Loopback0']['ipv6'][key]['ipv6']
+                    break
             ### Get XR release
             output = uut.parse('show version')
             version = output['software_version']
@@ -100,7 +107,7 @@ def Testbed_routine(hostname):
             else:
                 lic_status="No Status Info. Check vRouter"
             # Sheet Format: "Hostname","Lo0 - IPv4","Lo0 - IPv6","Lo0 - Prefix SID","Lo10 - IPv4","Lo10 - IPv4","XR Version","SMU State","License Status"
-            sheet.append([hostname,lo0_ipv4,version,smu_state,lic_status])
+            sheet.append([hostname,lo0_ipv4,lo0_ipv6,version,smu_state,lic_status])
         except Exception as e:
             logging.debug('Exception catched on Hostname: "{}"\n{}'.format(hostname,e))
         uut.destroy()
