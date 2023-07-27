@@ -90,7 +90,13 @@ def Testbed_routine(hostname):
             ### Get IPv6 from Lo10
             lo10_ipv6 = ''
             try:
-                output = uut.parse('show ipv6 interface Loopback10')
+                vrf = 'NETWORK-MGMT'
+                sddc_patterns = ['RANMK', 'RANMN']
+                for pattern in sddc_patterns:
+                    if pattern in hostname:
+                        vrf = 'SERVICE-MGMT'
+                        break
+                output = uut.parse('show ipv6 vrf {} interface Loopback10'.format(vrf))
                 for key in output['Loopback10']['ipv6'].keys():
                     if '/128' in key:
                         lo10_ipv6 = output['Loopback10']['ipv6'][key]['ipv6']
@@ -98,6 +104,7 @@ def Testbed_routine(hostname):
             except Exception as e:
                 logging.info("Exception catched at Lo10 IPv6 \n {}".format(e))
                 lo10_ipv6 = 'Not Configured'
+            logging.info("Lo10 IPv6 on vRouter: {} is: {}".format(hostname,lo10_ipv6))
             ### Get XR release
             output = uut.parse('show version')
             version = output['software_version']
