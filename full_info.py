@@ -77,7 +77,12 @@ def Testbed_routine(hostname):
             output = uut.execute('show isis segment-routing label table | i Loopback0')
             label_re = re.compile(r'^([0-9]+\S)', re.M)
             labels = label_re.findall(output)
-            logging.info("Prefix-SID vRouter: {} is: {}".format(hostname,labels[0]))
+            prefix_sid = ''
+            if labels:
+                prefix_sid = labels[0]
+            else:
+                prefix_sid = 'No Prefix-SID'
+            logging.info("Prefix-SID vRouter: {} is: {}".format(hostname,prefix_sid))
             ### Get IPv4 from Lo10
             output = uut.parse('show ipv4 interface brief | i Loopback10')
             lo10_ipv4 = output['interface']['Loopback10']['ip_address']
@@ -134,7 +139,7 @@ def Testbed_routine(hostname):
             else:
                 lic_status="No Status Info. Check vRouter"
             # Sheet Format: "Hostname","Lo0 - IPv4","Lo0 - IPv6","Lo0 - Prefix SID","Lo10 - IPv4","Lo10 - IPv4","XR Version","SMU State","License Status"
-            sheet.append([hostname,lo0_ipv4,lo0_ipv6,labels[0],lo10_ipv4,lo10_ipv6,version,smu_state,lic_status])
+            sheet.append([hostname,lo0_ipv4,lo0_ipv6,prefix_sid,lo10_ipv4,lo10_ipv6,version,smu_state,lic_status])
         except Exception as e:
             logging.debug('Exception catched on Hostname: "{}"\n{}'.format(hostname,e))
         uut.destroy()
