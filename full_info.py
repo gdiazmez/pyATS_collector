@@ -4,6 +4,7 @@ from openpyxl import load_workbook
 from openpyxl.workbook import Workbook
 import logging
 import os
+import re
 import getpass
 from utils import Create_Testbed,pool_connection
 
@@ -59,13 +60,39 @@ def Testbed_routine(hostname):
             ### Get IPv4 from Lo0
             output = uut.parse('show ipv4 interface brief | i Loopback0')
             lo0_ipv4 = output['interface']['Loopback0']['ip_address']
+            logging.info("Lo0 IPv4 on vRouter: {} is: {}".format(hostname,lo0_ipv4))
             ### Get IPv6 from Lo0
-            output = uut.parse('show ipv6 interface Loopback0')
             lo0_ipv6 = ''
-            for key in output['Loopback0']['ipv6'].keys():
-                if '/128' in key:
-                    lo0_ipv6 = output['Loopback0']['ipv6'][key]['ipv6']
-                    break
+            try:
+                output = uut.parse('show ipv6 interface Loopback0')
+                for key in output['Loopback0']['ipv6'].keys():
+                    if '/128' in key:
+                        lo0_ipv6 = output['Loopback0']['ipv6'][key]['ipv6']
+                        break
+            except Exception as e:
+                logging.info("Exception catched at Lo0 IPv6 \n {}".format(e))
+                lo0_ipv6 = 'Not Configured'
+            logging.info("Lo0 IPv6 on vRouter: {} is: {}".format(hostname,lo0_ipv6))
+            ### Get Prefix-SID from Lo0
+            output = uut.execute('show isis segment-routing label table | i Loopback0')
+            label_re = re.compile(r'^([0-9]+\S)', re.M)
+            labels = label_re.findall(output)
+            logging.info("Prefix-SID vRouter: {} is: {}".format(hostname,labels[0]))
+            ### Get IPv4 from Lo10
+            output = uut.parse('show ipv4 interface brief | i Loopback10')
+            lo10_ipv4 = output['interface']['Loopback10']['ip_address']
+            logging.info("Lo10 IPv4 on vRouter: {} is: {}".format(hostname,lo10_ipv4))
+            ### Get IPv6 from Lo10
+            lo10_ipv6 = ''
+            try:
+                output = uut.parse('show ipv6 interface Loopback10')
+                for key in output['Loopback10']['ipv6'].keys():
+                    if '/128' in key:
+                        lo10_ipv6 = output['Loopback10']['ipv6'][key]['ipv6']
+                        break
+            except Exception as e:
+                logging.info("Exception catched at Lo10 IPv6 \n {}".format(e))
+                lo10_ipv6 = 'Not Configured'
             ### Get XR release
             output = uut.parse('show version')
             version = output['software_version']
@@ -107,7 +134,7 @@ def Testbed_routine(hostname):
             else:
                 lic_status="No Status Info. Check vRouter"
             # Sheet Format: "Hostname","Lo0 - IPv4","Lo0 - IPv6","Lo0 - Prefix SID","Lo10 - IPv4","Lo10 - IPv4","XR Version","SMU State","License Status"
-            sheet.append([hostname,lo0_ipv4,lo0_ipv6,version,smu_state,lic_status])
+            sheet.append([hostname,lo0_ipv4,lo0_ipv6,labels[0],lo10_ipv4,lo10_ipv6,version,smu_state,lic_status])
         except Exception as e:
             logging.debug('Exception catched on Hostname: "{}"\n{}'.format(hostname,e))
         uut.destroy()
