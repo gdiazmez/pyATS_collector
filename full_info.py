@@ -87,8 +87,12 @@ def Testbed_routine(hostname):
                 prefix_sid = 'No Prefix-SID'
             logging.info("Prefix-SID vRouter: {} is: {}".format(hostname,prefix_sid))
             ### Get IPv4 from Lo10
-            output = uut.parse('show ipv4 interface brief | i Loopback10')
-            lo10_ipv4 = output['interface']['Loopback10']['ip_address']
+            try:
+                output = uut.parse('show ipv4 interface brief | i Loopback10')
+                lo10_ipv4 = output['interface']['Loopback10']['ip_address']
+            except Exception as e:
+                logging.info("Exception catched at Lo10 ipv4")
+                lo10_ipv4 = 'Not present'
             logging.info("Lo10 IPv4 on vRouter: {} is: {}".format(hostname,lo10_ipv4))
             ### Get IPv6 from Lo10
             lo10_ipv6 = ''
