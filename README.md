@@ -4,8 +4,11 @@ python scripts to run a routine using a manual testbed created on the fly from a
 
 ## Pre-requisites
 pip install genie
+
 pip install pyats
+
 pip install openpyxl
+
 pip install rich
 
 ## XR full check
@@ -14,18 +17,26 @@ Collect Lo0 Ipv4/IPv6, SR Prefix SID, XR Version, SMU list and license registrat
 usage: full_info.py [-h] -f FILE [-c CREDENTIALS] [-j] [-d] [-e] [-r]
 
 FILE is an xlsx filled with hostname/ip tuples, see device_info.xlsx example
-if no -c (credential) flag used, script would ask interactively for them
+
+If no -c (credential) flag used, script would ask interactively for them
+
 
 To improve execution time and avoid interacting with script use environment variables (-e flag):
 
 VROUTER_USER = String with username of CLI on device
+
 VROUTER_PASS = String with password of CLI on device
 
-If -j flag is used (for jumphost usage)
+
+If -j flag is used (for jumphost usage):
+
 JUMP_IP = String with IP address of jumphost
+
 JUMP_PORT = Int with TCP port of jumphost CLI 
-  JUMP_USER = String with username for Jumphost
-  JUMP_PASS = String with password for Jumphost
+
+JUMP_USER = String with username for Jumphost
+
+JUMP_PASS = String with password for Jumphost
 
 ### Arguments
 [-h, --help] show this help message and exit
