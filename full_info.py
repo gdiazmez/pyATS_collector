@@ -288,12 +288,14 @@ Using environment variables for device credentials. Check these if connection fa
         task3 = progress.add_task("[red]Failed...", total=total_devices)
         result = pool_connection(12,hostnames,Testbed_routine)
     if result:
-        print("Success!!!")
         if len(failed)>0:
-            print("\nFailed devices:")
+            print("\nRoutine ended with failed devices:")
             for host in failed:
                 print("{}".format(host))
+        else:
+            print("Success!!!")
         out_wb.save(filename = "Output.xlsx")
+        print("\nResults on ./Outputx.xlsx")
 
 if __name__ == "__main__":
     main()
