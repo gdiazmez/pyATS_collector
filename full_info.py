@@ -7,13 +7,14 @@ import os
 import re
 import getpass
 from utils import Create_Testbed,pool_connection
+from rich.progress import Progress
 
 logging.basicConfig(filename='log_full_info.log', level=logging.DEBUG,
                     format='%(asctime)s %(levelname)s : %(message)s')
 
 
 def Testbed_routine(hostname):
-
+    progress.update(task1, advance=1)
     uut = tb.devices[hostname]
     connected=False
     if jump_replace:
@@ -52,7 +53,9 @@ def Testbed_routine(hostname):
             connected=True
         except:
             logging.debug("Error #3 in the connection to: '{}'".format(hostname))
+            progress.update(task3, advance=1)
             print("Error #3 in the connection to: '{}'. Check details".format(hostname))
+            failed.append(hostname)
 
     if connected:
         print('Device: "{}" connected, collecting'.format(hostname))
@@ -150,6 +153,8 @@ def Testbed_routine(hostname):
         except Exception as e:
             logging.debug('Exception catched on Hostname: "{}"\n{}'.format(hostname,e))
         uut.destroy()
+        progress.update(task2, advance=1)
+        logging.debug('Processing complete for device: "{}"'.format(hostname))
         print('Processing complete for device: "{}"'.format(hostname))
 
 def main():
@@ -268,9 +273,26 @@ Using environment variables for device credentials. Check these if connection fa
     ### 1st row
     sheet.append(["Hostname","Lo0 - IPv4","Lo0 - IPv6","Lo0 - Prefix SID","Lo10 - IPv4","Lo10 - IPv4","XR Version","SMU State","License Status"])
 
-    result = pool_connection(12,hostnames,Testbed_routine)
+    global total_devices
+    global progress
+    global task1
+    global task2
+    global task3
+    global failed
+    total_devices = len(hostnames)
+    failed = []
+    print('Going to process: {} devices'.format(total_devices))
+    with Progress() as progress:
+        task1 = progress.add_task("[cyan]Processed...", total=total_devices)
+        task2 = progress.add_task("[green]Collected...", total=total_devices)
+        task3 = progress.add_task("[red]Failed...", total=total_devices)
+        result = pool_connection(12,hostnames,Testbed_routine)
     if result:
-        print("Success")
+        print("Success!!!")
+        if len(failed)>0:
+            print("\nFailed devices:")
+            for host in failed:
+                print("{}".format(host))
         out_wb.save(filename = "Output.xlsx")
 
 if __name__ == "__main__":
