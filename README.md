@@ -2,7 +2,7 @@
 
 python scripts to run a routine using a manual testbed created on the fly from an excel sheet with hostname/IP tuple
 
-## XR fulll check
+## XR full check
 Collect Lo0 Ipv4/IPv6, SR Prefix SID, XR Version, SMU list and license registration status from file with tuples
 
 usage: full_info.py [-h] -f FILE [-c CREDENTIALS] [-j] [-d] [-e] [-r]
