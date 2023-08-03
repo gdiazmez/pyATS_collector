@@ -1,6 +1,6 @@
 # pyATS Collector
 
-python scripts to run a routine using a manual testbed created on the fly from an excel sheet with hostname/IP tuple
+python scripts to run a routine using a manual testbed created on the fly from an excel sheet with hostname/IP tuple. Threads are included for speed up the process :)
 
 ## Pre-requisites
 pip install genie
@@ -72,7 +72,7 @@ usage: xr_version_smu.py [-h] -f FILE [-c CREDENTIALS] [-j] [-v] [-d] [-e] [-r]
 
 [-j, --jump] Optional Flag to ask for SSH Jumphost detail
 
-[-v, --vmc] Optional Flag to ommit check CSCwa80752 on VMC vRouters
+[-v, --vmc] Optional Flag to bypass check CSCwa80752 on VMC vRouters
 
 [-d, --detail] Optional Flag to print verbose output from pyATS
 
