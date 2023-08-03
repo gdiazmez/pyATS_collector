@@ -13,8 +13,6 @@ pip install rich
 
 ## Quick Demo
 
-![](https://github.com/pyATS_collector/demo.gif)
-
 ## XR full check
 Collect Lo0 Ipv4/IPv6, SR Prefix SID, XR Version, SMU list and license registration status from file with tuples
 
