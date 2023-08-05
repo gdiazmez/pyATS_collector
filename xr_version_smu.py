@@ -43,9 +43,11 @@ def Testbed_routine(hostname):
     if not connected:
         try:
             if vmc_flag:
-                uut.credentials['default'] = dict(username='root', password='dishcisco')
+                #Last resort creds if flag used
+                uut.credentials['default'] = dict(username='user_vmc', password='pass_vmc')
             else:
-                uut.credentials['default'] = dict(username='sdnc.aws', password='D1$HmgmtAW$')
+                #Last resort creds by default
+                uut.credentials['default'] = dict(username='local_user', password='local_pass')
             uut.connect(init_config_commands=[],connection_timeout=5,log_stdout=verbose_flag)
             connected=True
         except:

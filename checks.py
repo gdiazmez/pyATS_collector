@@ -78,7 +78,8 @@ def Testbed_routine(hostname):
 
     if not connected:
         try:
-            uut.credentials['default'] = dict(username='sdnc.aws', password='D1$HmgmtAW$')
+            # Last resort creds
+            uut.credentials['default'] = dict(username='dummy_user', password='dummy_pass')
             uut.connect(init_config_commands=[],connection_timeout=5,log_stdout=verbose_flag)
             connected=True
         except:

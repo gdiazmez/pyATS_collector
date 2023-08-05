@@ -46,9 +46,11 @@ def Testbed_routine(hostname):
         try:
             for pattern in vmc_patterns:
                 if pattern in hostname:
-                    uut.credentials['default'] = dict(username='root', password='dishcisco')
+                    #Last resort creds from pattern
+                    uut.credentials['default'] = dict(username='dummy', password='change_me')
             else:
-                uut.credentials['default'] = dict(username='sdnc.aws', password='D1$HmgmtAW$')
+                # Other group last resort creds
+                uut.credentials['default'] = dict(username='etc', password='cool_pass')
             uut.connect(init_config_commands=[],connection_timeout=5,log_stdout=verbose_flag)
             connected=True
         except:
