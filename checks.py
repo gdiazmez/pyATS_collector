@@ -103,6 +103,7 @@ def main():
     parser.add_argument('-j','--jump', action='store_true', help='Flag to ask for SSH Jumphost detail', required=False)
     parser.add_argument('-d','--detail', action='store_true', help='Flag to print verbose output from pyATS', required=False)
     parser.add_argument('-e','--environment', action='store_true', help='Flag to use env_variables', required=False)
+    parser.add_argument('-s','--skip', action='store_true', help='Flag to skip default commands', required=False)
     parser.add_argument('-r','--replace', action='store_true', help='Flag to use ssh-keygen -R to update ssh keys if jumphost is used',
                         required=False)
     parser.add_argument('-t','--type', help='Type of checks', choices=['pre','post'], required=True)
@@ -179,6 +180,9 @@ Using environment variables for device credentials. Check these if connection fa
                              jump_ip,jump_port,jump_user,jump_pass)
 
     commands = full_table['Commands']
+    if args.skip:
+        #Empty default command list
+        cmds.clear()
     for i in range(1, len(list(list(commands.columns)[0]))):
         cmds.append(list(list(commands.columns)[0])[i].value)
     try:
