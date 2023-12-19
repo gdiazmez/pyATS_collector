@@ -2,7 +2,7 @@ aws_environment
 overlay_aws_env
 __pycache__/utils.cpython-39.pyc
 *.log
-Output.xlsx
+*.xlsx
 .DS_Store
 Precheck/
 Postcheck/
@@ -11,4 +11,3 @@ example_device_info.xlsx
 devices.xlsx
 Testbed.yaml
 aws_overlay
-device_info.xlsx
