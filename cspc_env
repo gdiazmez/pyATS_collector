@@ -1,0 +1,6 @@
+export JUMP_IP='127.0.0.1'
+export JUMP_PORT=9934
+export JUMP_USER='gdiazmez'
+export JUMP_PASS='G_nov2023'
+export VROUTER_USER='gonzalo.diaz'
+export VROUTER_PASS='G_nov2023'
